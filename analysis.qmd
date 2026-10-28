@@ -1,0 +1,34 @@
+
+---
+title: "GitHub Advanced"
+author: "Emma Acedo"
+format: html
+execute:
+  echo: false
+---
+
+## Introduction
+
+This is my GitHub Advanced tutorial. I will use R and tidyverse to create a simple visualization using a built-in dataset.
+
+## Setup
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+## Data Visualization
+
+This plot shows the relationship between car weight and fuel efficiency using the built-in mtcars dataset.
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point(alpha = 0.7) +
+  labs(
+    title = "Engine Displacement vs. Highway MPG",
+    x = "Engine Displacement (L)",
+    y = "Highway MPG",
+    color = "Car Class"
+  )
+```
